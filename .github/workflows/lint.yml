@@ -1,0 +1,15 @@
+# what is the goal of the owokflows
+# Goal: Whenever someone is changes the code, the linter will check if the syntax, format , indentation is correct or not.
+name: AutoLinter
+
+on: 
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout/Clone the code
+        uses: actions/checkout@v7
+        
